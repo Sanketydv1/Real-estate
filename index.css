@@ -121,11 +121,12 @@ li {
 -----------------------------------*/
 #checkbox{
     visibility: hidden;
+    
 }
 .toggle-label{
     width: 4rem;
     height: 2.4rem;
-    background-color:var(--white);
+    background-color:var(--primary-color);
     display: inline-block;
     position: relative;
     border-radius: 10rem;
@@ -134,7 +135,7 @@ li {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color:var(--primary-color);
+    background-color:var(--white);
     transition: 0.3s ease;
     display: inline-block;
     position: absolute;
