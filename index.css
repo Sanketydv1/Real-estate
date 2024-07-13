@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+/*--------------- dark-mode color------------------ */
+:root .dark-mode{
+    --primary-color:#fff ;
+    --white: #000839;
+    --bg-color: #e6e6eb;
+  }
+   body.dark-mode{
+      background-color: var(--white);
+      color:var(--primary-color);
+  }
+  /*--------------- light-mode color------------------ */
+  
+:root {
+  --primary-color: #000839;
+  --white: #fff;
+  --bg-color: #e6e6eb;
+}
+.body{
+    background-color: var(--white);
+    color:var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.para {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/*--------------------------------
+ header and navbar style 
+------------------------- */
+.header {
+  height: 9.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5.4rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color:var(--primary-color)
+}
+.header .logo:hover,
+.header .logo:active{
+    color: coral;
+    transition: 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+  color: coral;
+}
+
+.navbar-link {
+  text-transform: uppercase;
+  color:var(--primary-color);
+}
+
+.mobile-nav-icon {
+  font-size: 4rem;
+  color: var(--primary-color)
+}
+
+.mobile-navbar-btn {
+  display: none;
+}
+
+.mobile-nav-icon[name="close"] {
+  display: none;
+}
+
+/*------------------------------------
+ toggle check box styles
+-----------------------------------*/
+#checkbox{
+    visibility: hidden;
+}
+.toggle-label{
+    width: 4rem;
+    height: 2.4rem;
+    background-color:var(--primary-color);
+    display: inline-block;
+    position: relative;
+    border-radius: 10rem;
+}
+.toggle-ball{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color:var(--white);
+    transition: 0.3s ease;
+    display: inline-block;
+    position: absolute;
+    top: .2rem;
+    left:.2rem;
+}
+#checkbox:checked + .toggle-label .toggle-ball{
+    transform: translateX(1.6rem);
+}
+
+/*------------------------------
+ resuable code  
+ -------------------------------*/
+.section {
+  padding: 9.6rem 0;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+/*--------------------------------
+ hero section style
+------------------------- */
+
+.section-hero {
+  position: relative;
+}
+
+.section-hero::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 9.6rem;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  background: var(--bg-color);
+  z-index: -1;
+}
+
+.primary-heading {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.section-hero .para {
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.btn{
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 10rem;
+    height: 3.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+.btn:hover{
+    color: coral;
+}
+.hero-icons {
+  margin-top: 4rem;
+}
+
+.hero-icons .icon {
+  font-size: 5rem;
+  position: relative;
+}
+
+.hero-icons h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-hero .hero-icon-style .para {
+  line-height: 1.6;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hero-image img {
+  height: 90%;
+  box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.hero-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  right: 10%;
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+.hero-img-overlay .para {
+  color: var(--white);
+}
+
+.hero-img-overlay .para:nth-child(2) {
+  margin: 0;
+  font-weight: bold;
+}
+
+.hero-img-overlay .para:last-child {
+  margin: 0;
+}
+
+/*--------------------------------
+  media queries style 
+------------------------- */
+
+@media (max-width: 1250px) {
+  .container {
+    padding: 0 6rem;
+  }
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    max-width: 96rem;
+  }
+
+  .section-hero .grid-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero .hero-icons .grid-two-column {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+  }
+
+  .navbar .navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar .navbar-link {
+    color: var(--white);
+  }
+
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 9999;
+  }
+
+  .active .navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    z-index: 9999;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close"] {
+    display: block;
+    color: var(--white);
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu"] {
+    display: none;
+    color: var(--white);
+  }
+
+  .section::before {
+    height: 30%;
+  }
+
+  .hero-image img {
+    width: 60%;
+  }
+
+  .hero-image .hero-img-overlay {
+    width: 80%;
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .hero-image img {
+    width: 80%;
+  }
+  .hero-image .hero-img-overlay {
+    width: 90%;
+    left: 0;
+  }
+}
